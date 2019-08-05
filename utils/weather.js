@@ -4,7 +4,7 @@ const api = require('./apiKeys')
 const forecast = ({latitude, longitude}, callback) => //destructuring geocodeData
 {
     const apiKey = api.weather
-    const weatherUrl = 'https://api.darksky.net/forecast/' + apiKey + '/'+ latitude + ',' + longitude
+    const weatherUrl = `https://api.darksky.net/forecast/${apiKey}/${latitude},${longitude}`
 
     request({url: weatherUrl, json: true}, (error, {body}) =>
 {

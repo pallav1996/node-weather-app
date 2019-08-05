@@ -6,7 +6,7 @@ const geoCode = (address, callback) =>
         return callback("Give proper address", undefined)
 
     const apiKey = api.geocode    
-    const geocodeUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + address + '.json?access_token=' + apiKey;
+    const geocodeUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?access_token=${apiKey}`;
 
     request({url: geocodeUrl, json:true}, (error, {body}) =>
 {
